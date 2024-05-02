@@ -1,11 +1,33 @@
 html,
-body {
-  height: 100%;
-  background: url("../images/blue.png") repeat;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-}
+<body>
+  <!-- Video Background -->
+  <video playsinline autoplay muted loop id="bgvid" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -100;">
+    <source src="path/to/your-video.mp4" type="video/mp4">
+  </video>
+
+  <!-- Content -->
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <div class="container content">
+        <h1>Oops??</h1>
+        <h3>Something went wrong. let me know: <a href="mailto:robin@robinjanssens.net?subject=Website not found!!&body=Hey Robin,%0D%0A%0D%0AI tried reaching __________, but something seems wrong.%0D%0A%0D%0ASincerely,%0D%0A__________">robin@robinjanssens.net</a></h3>
+        
+        <div class="introduction-item col-md-4">
+          <h2>Robin Janssens</h2>
+          <p><a class="btn btn-default btn-lg" href="http://robinjanssens.net" role="button">Go to website &raquo;</a></p>
+        </div>
+        <div class="introduction-item col-md-4">
+          <h2>LVSV Antwerpen</h2>
+          <p><a class="btn btn-default btn-lg" href="http://lvsvantwerpen.be" role="button">Go to website &raquo;</a></p>
+        </div>
+        <div class="introduction-item col-md-4">
+          <h2>Carl Reusens</h2>
+          <p><a class="btn btn-default btn-lg" href="http://carlreusens.com" role="button">Go to website &raquo;</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
