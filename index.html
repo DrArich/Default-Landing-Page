@@ -2,44 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Website Title</title>
-  <link rel="stylesheet" href="./assets/css/bootstrap.css">
-  <link rel="stylesheet" href="./assets/css/default.css">
+  <title>Video Background Example</title>
+  <style>
+    /* Ensures that the body takes up the full height of the viewport */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Positions the video */
+    #background-video {
+      position: fixed; /* Fixed position to cover all areas */
+      right: 0;
+      bottom: 0;
+      min-width: 100%; /* Minimum width and height to cover the screen */
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100; /* Behind all other content */
+      background-size: cover;
+    }
+
+    /* Content container */
+    .content {
+      position: relative; /* Relative to place it above video but within normal flow */
+      z-index: 1; /* Above the video */
+      padding: 20px;
+      text-align: center; /* Centering text */
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <!-- Video Background -->
-  <video playsinline autoplay muted loop id="bgvid" style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; z-index: -100;">
+  <!-- Video as Background -->
+  <video id="background-video" autoplay loop muted playsinline>
     <source src="./assets/images/cloud-homepage-video.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
-  <!-- Content -->
-  <div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <div class="container content">
-        <h1>Oops??</h1>
-        <h3>Something went wrong. let me know: <a href="mailto:robin@robinjanssens.net?subject=Website not found!!&body=Hey Robin,%0D%0A%0D%0AI tried reaching __________, but something seems wrong.%0D%0A%0D%0ASincerely,%0D%0A__________">robin@robinjanssens.net</a></h3>
-        
-        <div class="introduction-item col-md-4">
-          <h2>Robin Janssens</h2>
-          <p><a class="btn btn-default btn-lg" href="http://robinjanssens.net" role="button">Go to website &raquo;</a></p>
-        </div>
-        <div class="introduction-item col-md-4">
-          <h2>LVSV Antwerpen</h2>
-          <p><a class="btn btn-default btn-lg" href="http://lvsvantwerpen.be" role="button">Go to website &raquo;</a></p>
-        </div>
-        <div class="introduction-item col-md-4">
-          <h2>Carl Reusens</h2>
-          <p><a class="btn btn-default btn-lg" href="http://carlreusens.com" role="button">Go to website &raquo;</a></p>
-        </div>
-      </div>
-    </div>
+  <!-- Overlay Content -->
+  <div class="content">
+    <h1>Welcome to Our Website</h1>
+    <p>This is a demonstration of a full-screen background video.</p>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
-  <script src="./assets/js/analytics.js"></script>
 </body>
 </html>
